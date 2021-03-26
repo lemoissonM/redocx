@@ -1,4 +1,4 @@
-import fs from 'fs';
+import fs from 'browserify-fs';
 import React, { Component } from 'react';
 import TextComponent from '../examples/Text';
 import { render, Document, Text } from '../src/';

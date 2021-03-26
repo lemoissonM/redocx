@@ -1,4 +1,4 @@
-const fs = require('fs');
+const fs = require('browserify-fs');
 import streams from 'memory-streams';
 import { createElement } from '../utils/createElement';
 import { WordRenderer } from './renderer';
