@@ -1,4 +1,4 @@
-import fs from 'fs';
+const fs from require('fs');
 import streams from 'memory-streams';
 import { createElement } from '../utils/createElement';
 import { WordRenderer } from './renderer';
