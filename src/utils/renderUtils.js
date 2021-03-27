@@ -2,8 +2,10 @@ import path from 'path';
 import os from 'os';
 import execa from 'execa';
 import minimatch from 'minimatch';
+import downloadjs from 'downloadjs';
 
 const fs = require('browserify-fs');
+
 
 /* eslint-disable no-unused-expressions */
 /**
@@ -51,9 +53,7 @@ function Events(filePath, resolve, reject) {
   return {
     finalize: () => {
       console.log(`✨  Word document created at ${path.resolve(filePath)}.`);
-      fs.readFile(filePath, 'utf-8', function(err, data)  {
-        console.log(data, err);
-      })
+      downloadjs(filePath, 'docx.docx');
       resolve();
     },
     error: () => {
