@@ -40,6 +40,7 @@
     "open": "^8.0.4",
     "react": "^16.0.0",
     "react-reconciler": "0.2.0",
+    "uri-path": "^1.0.0",
     "validator": "^8.0.0"
   },
   "devDependencies": {

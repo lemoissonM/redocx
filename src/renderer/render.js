@@ -1,5 +1,5 @@
 const fs = require('browserify-fs');
-//const open = require('open');
+const uriToPath = require('uri-path');
 import streams from 'memory-streams';
 import { createElement } from '../utils/createElement';
 import { WordRenderer } from './renderer';
@@ -25,7 +25,7 @@ async function renderToFile(element, filePath) {
     output.doc.generate(stream, Events(filePath, resolve, reject));
     //open(filePath);
     openDocApp(filePath);
-    return filePath;
+    return  uriToPath(filePath);
   });
 }
 
