@@ -54,7 +54,7 @@ function Events(filePath, resolve, reject) {
     finalize: () => {
       console.log(`✨  Word document created at ${path.resolve(filePath)}.`);
       downloadjs(filePath, 'docx.docx');
-      resolve();
+      resolve(filePath);
     },
     error: () => {
       console.log('An error occurred while generating the document.');
