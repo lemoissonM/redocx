@@ -21,10 +21,11 @@ async function renderToFile(element, filePath) {
   const output = await parse(container).toBuffer();
   const stream = fs.createWriteStream(filePath);
 
-  await new Promise((resolve, reject) => {
+  return await new Promise((resolve, reject) => {
     output.doc.generate(stream, Events(filePath, resolve, reject));
     //open(filePath);
     openDocApp(filePath);
+    return filePath;
   });
 }
 
